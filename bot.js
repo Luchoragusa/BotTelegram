@@ -8,15 +8,14 @@ bot.use((ctx, next) => {
 });
 
 bot.start((ctx) => {
-  console.log("\n🤖 ¡Bot iniciado correctamente! 🚀\n");
+  console.log("\n\n 🤖 ¡Bot iniciado correctamente! 🚀\n\n");
 
-  console.log(`
-              📩  ============== Información del Mensaje ==============
-              🙋‍♂️  Enviado por: ${ctx.from.first_name || ""} ${ctx.from.last_name || ""}
-              👤  ID de Usuario: ${ctx.from.id}
-              📨  Mensaje: "${ctx.message.text}"
-              📩  Tipo de Mensaje: [${ctx.updateSubTypes[0]}]
-              =============================================================`);
+  console.log(`📩  ============== Información del Mensaje ==============
+🙋‍♂️  Enviado por: ${ctx.from.first_name || ""} ${ctx.from.last_name || ""}
+👤  ID de Usuario: ${ctx.from.id}
+📨  Mensaje: "${ctx.message.text}"
+📩  Tipo de Mensaje: [${ctx.updateSubTypes[0]}]
+=============================================================\n`);
 
   bot.telegram.sendMessage(ctx.chat.id, "**¡Hola mundo!**", {
     parse_mode: "Markdown",
