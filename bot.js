@@ -10,7 +10,7 @@ bot.use((ctx, next) => {
 bot.start((ctx) => {
   console.log("\n🤖 ¡Bot iniciado correctamente! 🚀\n\n");
 
-  console.log(`  ============== 📩 Información del Mensaje ==============
+  console.log(`\n============== 📩 Información del Mensaje ==============
 🙋‍♂️  Enviado por: ${ctx.from.first_name || ""} ${ctx.from.last_name || ""}
 👤  ID de Usuario: ${ctx.from.id}
 📨  Mensaje: "${ctx.message.text}"
